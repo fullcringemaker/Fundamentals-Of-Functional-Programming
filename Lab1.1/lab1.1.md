@@ -32,6 +32,11 @@ val pack: List[Int] => List[List[Int]] = {
     val (grp, tail) = collect(x, xs)
     grp :: pack(tail)
 }
+
+println(pack(List(5,5,5)))
+println(pack(List(1,1,2,2,2,1)))
+println(pack(List(1,2,1,2)))
+println(pack(Nil))
 ```
 
 # Вывод
