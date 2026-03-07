@@ -33,10 +33,10 @@ val pack: List[Int] => List[List[Int]] = {
     grp :: pack(tail)
 }
 
-println(pack(List(5,5,5)))
-println(pack(List(1,1,2,2,2,1)))
-println(pack(List(1,2,1,2)))
-println(pack(Nil))
+pack(List(5,5,5))
+pack(List(1,1,2,2,2,1))
+pack(List(1,2,1,2))
+pack(Nil)
 ```
 
 # Вывод
