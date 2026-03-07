@@ -31,6 +31,13 @@ class BoolFormula private (f: Map[String, Boolean] => Boolean) {
   def unary_! : BoolFormula =
     new BoolFormula(env => !this.eval(env))
 }
+
+val a = new BoolFormula("a")
+val b = new BoolFormula("b")
+val c = new BoolFormula("c")
+val e = Map("a" -> true, "b" -> false, "c" -> true)
+val form = a * b + c
+println(form.eval(e))
 ```
 
 # Вывод
