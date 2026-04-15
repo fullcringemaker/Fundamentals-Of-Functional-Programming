@@ -80,8 +80,7 @@ object Main {
               else {
                 val one = Map(x -> term)
                 val newRest = rest.map { case (a, b) => (substitute(a, one), substitute(b, one)) }
-                val newSigma = sigma.map { case (name, expr) => name -> substitute(expr, one) } + 
-(x -> term)
+                val newSigma = sigma.map { case (name, expr) => name -> substitute(expr, one) } + (x -> term)
                 loop(newRest, newSigma)
               }
 
@@ -90,8 +89,7 @@ object Main {
               else {
                 val one = Map(x -> term)
                 val newRest = rest.map { case (a, b) => (substitute(a, one), substitute(b, one)) }
-                val newSigma = sigma.map { case (name, expr) => name -> substitute(expr, one) } + 
-(x -> term)
+                val newSigma = sigma.map { case (name, expr) => name -> substitute(expr, one) } + (x -> term)
                 loop(newRest, newSigma)
               }
 
